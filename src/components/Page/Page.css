@@ -4,8 +4,17 @@
 }
 
 .page__title {
+  font-size: 24px;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 700;
 }
 
 .page__disclaimer {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
+}
+.page__img {
+  max-width: 100%;
+  min-height: 250px;
+  border-radius: 20px;
+  margin-bottom: 10px;
 }

@@ -1,0 +1,79 @@
+.connectButton {
+  border: 1px solid rgb(173, 173, 173);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  padding-bottom: 15px;
+  margin: 10px 0px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+@media (prefers-color-scheme: dark) {
+  .connectButton {
+    border: 1px solid rgb(59, 59, 59);
+
+  }
+  .connectButton:hover {
+    background-color: #333336;
+  }
+  .check,.walletpic,.lock{
+    background-color: #272728;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .connectButton {
+    border: 1px solid rgb(204, 204, 204);
+
+  }
+  .connectButton:hover {
+    background-color: rgb(214, 214, 214);
+  }
+  .check{
+    background-color: #EAF9E6;
+  }
+  .walletpic{
+    background-color: #EBF5FF;
+  }
+  .lock{
+    background-color: #DCDCDD;
+  }
+}
+
+.connect__text {
+  align-items: center;
+  line-height: 0;
+}
+.connect__text h1 {
+  font-family: 'Roboto',sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+}
+.connect__text p {
+  font-family: 'Roboto',sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.7;
+}
+.check {
+
+  width: 40px;
+  margin: 0px 15px;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+.lock {
+
+  width: 40px;
+  margin: 0px 15px;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+.walletpic {
+  width: 40px;
+  margin: 0px 15px;
+  margin-top: 5px;
+  border-radius: 10px;
+}
