@@ -2,9 +2,8 @@
   border-radius: 15px;
   display: flex;
   align-items: center;
-  padding: 10px 0px;
-  padding-bottom: 15px;
-  margin: 10px 0px;
+  padding: 10px 0 15px;
+  margin: 10px 0;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -12,9 +11,8 @@
   border-radius: 15px;
   display: flex;
   align-items: center;
-  padding: 10px 0px;
-  padding-bottom: 15px;
-  margin: 10px 0px;
+  padding: 10px 0 15px;
+  margin: 10px 0;
   pointer-events: none;
   opacity: 0.5;
 }
@@ -32,16 +30,14 @@
   font-weight: 400;
 }
 
-.check,.lock,.walletpic {
+.check,.lock,.wallet-pic {
   padding: 5px;
-  margin: 0px 15px;
-  margin-top: 5px;
+  margin: 5px 15px 0;
   border-radius: 10px;
 }
 @media (prefers-color-scheme: dark) {
   .connectButton {
     border: 1px solid rgb(59, 59, 59);
-
   }
   .connectButton__disabled{
     border: 1px solid rgb(85, 85, 85);
@@ -49,7 +45,7 @@
   .connectButton:hover {
     background-color: #333336;
   }
-  .check,.walletpic,.lock{
+  .check,.wallet-pic,.lock{
     background-color: #272728;
   }
   .connect__text p {
@@ -72,7 +68,7 @@
   .check{
     background-color: #EAF9E6;
   }
-  .walletpic{
+  .wallet-pic{
     background-color: #EBF5FF;
   }
   .lock{

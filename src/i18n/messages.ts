@@ -15,5 +15,18 @@ export const messages = {
     inform: 'Click to inform the ownership',
     join: 'Join to "Not meme" chanel',
   },
-  [LOCALES.RUSSIAN]: {},
+  [LOCALES.RUSSIAN]: {
+    getaccess:
+      'Получите доступ к секретному каналу "Not meme.". Для доступа к каналу необходимо иметь NFT "12 минут".',
+    tasktxt1: 'Выполните задания для доступа',
+    tasktxt2: 'Особый канал для особенных людей',
+    title: 'Доступ к каналу "Not meme."',
+    connect: 'Подключите кошелек TON',
+    connectwall: 'Подключить кошелек',
+    getnft: 'Получите NFT "12 минут", если у вас его еще нет',
+    getgems: 'На сайте Getgems.io',
+    anon: 'Владейте NFT "Анонимный номер Telegram"',
+    inform: 'Нажмите, чтобы подтвердить владение',
+    join: 'Присоединяйтесь к каналу "Not meme"',
+  },
 };

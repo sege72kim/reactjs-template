@@ -1,8 +1,8 @@
 import { postEvent, Utils } from "@tma.js/sdk"
 import { FormattedMessage } from "react-intl"
-import tempicon from "~/pages/IndexPage/components/images/tempicon.svg"
-import done from "~/pages/IndexPage/components/images/done.svg"
-import lock from "~/pages/IndexPage/components/images/lock.svg"
+import tempicon from "../../../public/images/tempicon.svg"
+import done from "../../../public/images/done.svg"
+import lock from "../../../public/images/lock.svg"
 import type { Task } from "~/pages/IndexPage/IndexPage.tsx"
 
 import "./styles.css"
@@ -32,7 +32,7 @@ const LinkButton = ({ task, completeTask }: TaskProps) => {
         src={task.isCompleted ? done : task.isOpened ? tempicon : lock}
         alt=""
         className={
-          task.isCompleted ? "check" : task.isOpened ? "walletpic" : "lock"
+          task.isCompleted ? "check" : task.isOpened ? "wallet-pic" : "lock"
         }
       />
 

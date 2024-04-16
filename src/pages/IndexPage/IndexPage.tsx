@@ -1,14 +1,12 @@
-import { useMainButton } from "@tma.js/sdk-react"
-import { useEffect, useState } from "react"
+import { useEffect, useState, FC } from "react"
 import { FormattedMessage } from "react-intl"
-import type { FC } from "react"
 
 import { Page } from "~/components/Page/Page.tsx"
 
-import AccessButton from "./components/accessButton.tsx"
-import Connect from "./components/connectButton.tsx"
-import JoinButton from "./components/joinButton.tsx"
-import LinkButton from "./components/linkButton.tsx"
+import AccessButton from "~/components/Tasks/AccessButton.tsx"
+import Connect from "~/components/Tasks/ConnectButton.tsx"
+import JoinButton from "~/components/Tasks/JoinButton.tsx"
+import LinkButton from "~/components/Tasks/LinkButton.tsx"
 
 import "./IndexPage.css"
 

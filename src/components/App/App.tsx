@@ -5,7 +5,7 @@ import {
 } from "@tma.js/react-router-integration"
 import { useBackButton } from "@tma.js/sdk-react"
 import { TonConnectUIProvider } from "@tonconnect/ui-react"
-import { type FC, useEffect, useMemo } from "react"
+import { type FC, useMemo } from "react"
 import { IntlProvider } from "react-intl"
 import { Navigate, Route, Router, Routes } from "react-router-dom"
 

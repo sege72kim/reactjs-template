@@ -8,12 +8,12 @@ export interface PageProps extends PropsWithChildren {
   disclaimer?: ReactNode
 }
 
-export const Page: FC<PageProps> = ({ title, children, disclaimer }) => {
+export const Page: FC<PageProps> = ({ children, disclaimer }) => {
   return (
     <div className="page">
       <img
         className="page__img"
-        src="https://png.pngtree.com/thumb_back/fw800/background/20230610/pngtree-picture-of-a-blue-bird-on-a-black-background-image_2937385.jpg"
+        src="https://notmeme.org/notmeme_watchdog_bot/notmeme_banner_1920x1080.jpg"
         alt="Get access"
       />
       <h1 className="page__title">
