@@ -31,7 +31,7 @@ const Connect = ({ task, completeTask }: TaskProps) => {
   return (
     <div className="connectButton" onClick={open}>
       <img
-        src={task.isCompleted ? done : task.isOpened ? walletpic : lock}
+        src={wallet ? done : walletpic}
         alt=""
         className={
           task.isCompleted ? "check" : task.isOpened ? "wallet-pic" : "lock"
