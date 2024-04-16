@@ -12,7 +12,7 @@ const TruncateText: React.FC<Props> = ({ text, maxLength }) => {
     }
     const start = str.substring(0, maxLength / 2)
     const end = str.substring(str.length - maxLength / 2)
-    return start + "..." + end
+    return `${start}...${end}`
   }
   const truncatedText = truncate(text, maxLength)
 

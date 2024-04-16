@@ -1,38 +1,41 @@
-import type { FC } from "react"
-import { Page } from "~/components/Page/Page.tsx"
-import "./IndexPage.css"
-import Connect from "./components/connectbutton"
-import LinkButton from "./components/linkbutton"
-import AccessButton from "./components/accessbutton"
-import JoinButton from "./components/joinbutton"
-import { FormattedMessage } from "react-intl"
-import { useState, useEffect } from "react"
 import { useMainButton } from "@tma.js/sdk-react"
+import { useEffect, useState } from "react"
+import { FormattedMessage } from "react-intl"
+import type { FC } from "react"
+
+import { Page } from "~/components/Page/Page.tsx"
+
+import AccessButton from "./components/accessButton.tsx"
+import Connect from "./components/connectButton.tsx"
+import JoinButton from "./components/joinButton.tsx"
+import LinkButton from "./components/linkButton.tsx"
+
+import "./IndexPage.css"
 
 export interface Task {
   id: number
   isCompleted: boolean
+  isOpened: boolean
 }
 
 interface Data {
   tasks: Task[]
 }
-interface TaskProps {
-  task: Task
-  completeTask: () => void
-}
 
 export const IndexPage: FC = () => {
   const [data, setData] = useState<Data>({} as Data)
 
-  const saveDataToLocalStorage = (data: Data) => {
-    localStorage.setItem("tasksData", JSON.stringify(data))
+  const saveDataToLocalStorage = (dataToSave: Data) => {
+    localStorage.setItem("tasksData", JSON.stringify(dataToSave))
   }
 
   const completeTask = (id: number) => {
     const modifiedData = data
 
     modifiedData.tasks[id].isCompleted = !modifiedData.tasks[id].isCompleted
+    if (modifiedData.tasks[id + 1]) {
+      modifiedData.tasks[id + 1].isOpened = true
+    }
 
     setData(modifiedData)
     saveDataToLocalStorage(modifiedData)
@@ -45,27 +48,32 @@ export const IndexPage: FC = () => {
       setData(savedData)
     }
 
-    if (!data || !data.tasks?.length)
+    if (!data || !data.tasks?.length) {
       setData({
         tasks: [
           {
             id: 0,
-            isCompleted: false
+            isCompleted: false,
+            isOpened: true
           },
           {
             id: 1,
-            isCompleted: false
+            isCompleted: false,
+            isOpened: false
           },
           {
             id: 2,
-            isCompleted: false
+            isCompleted: false,
+            isOpened: false
           },
           {
             id: 3,
-            isCompleted: false
+            isCompleted: false,
+            isOpened: false
           }
         ]
       })
+    }
   }, [])
 
   if (!data?.tasks?.length) return <></>

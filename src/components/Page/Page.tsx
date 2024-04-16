@@ -1,7 +1,7 @@
+import { FormattedMessage } from "react-intl"
 import type { FC, PropsWithChildren, ReactNode } from "react"
 
 import "./Page.css"
-import { FormattedMessage } from "react-intl"
 
 export interface PageProps extends PropsWithChildren {
   title: string

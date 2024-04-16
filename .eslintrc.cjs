@@ -10,6 +10,7 @@ module.exports = {
     'airbnb',
     'airbnb-typescript',
     'airbnb/hooks',
+    'prettier',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -21,6 +22,11 @@ module.exports = {
     'simple-import-sort',
   ],
   rules: {
+    // ignore
+    "react-hooks/exhaustive-deps": 'off',
+    "jsx-a11y/click-events-have-key-events": 'off',
+    "jsx-a11y/no-static-element-interactions": 'off',
+
     '@typescript-eslint/consistent-type-imports': 'error',
     '@typescript-eslint/indent': 0,
     // Sometimes this rule decreases readability.

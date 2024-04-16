@@ -1,8 +1,10 @@
-import "./styles.css"
-import lock from "./imgs/lock.png"
-import done from "./imgs/done.png"
-import { Task } from "~/pages/IndexPage/IndexPage.tsx"
 import { FormattedMessage } from "react-intl"
+
+import done from "~/pages/IndexPage/components/images/done.png"
+import lock from "~/pages/IndexPage/components/images/lock.png"
+import type { Task } from "~/pages/IndexPage/IndexPage.tsx"
+
+import "./styles.css"
 
 interface TaskProps {
   task: Task

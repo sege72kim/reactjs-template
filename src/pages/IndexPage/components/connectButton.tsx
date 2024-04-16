@@ -1,13 +1,18 @@
-import "./styles.css"
-import { useTonWallet } from "@tonconnect/ui-react"
-import { useTonAddress } from "@tonconnect/ui-react"
-import TruncateText from "./TruncateText"
-import { useTonConnectModal } from "@tonconnect/ui-react"
-import walletpic from "./imgs/wallet.png"
-import done from "./imgs/done.png"
-import { Task } from "~/pages/IndexPage/IndexPage.tsx"
-import { FormattedMessage } from "react-intl"
+import {
+  useTonAddress,
+  useTonConnectModal,
+  useTonWallet
+} from "@tonconnect/ui-react"
 import { useEffect } from "react"
+import { FormattedMessage } from "react-intl"
+
+import done from "~/pages/IndexPage/components/images/done.png"
+import walletpic from "~/pages/IndexPage/components/images/wallet.png"
+import type { Task } from "~/pages/IndexPage/IndexPage.tsx"
+
+import "./styles.css"
+
+import TruncateText from "./TruncateText"
 
 interface TaskProps {
   task: Task
@@ -26,9 +31,9 @@ const Connect = ({ task, completeTask }: TaskProps) => {
   return (
     <div className="connectButton" onClick={open}>
       {wallet ? (
-        <img src={done} className="check" />
+        <img src={done} className="check"  alt=''/>
       ) : (
-        <img src={walletpic} className="walletpic" />
+        <img src={walletpic} className="walletpic"  alt=''/>
       )}
       <div className="connect__text">
         <h1>

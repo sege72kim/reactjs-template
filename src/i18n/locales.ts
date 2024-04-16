@@ -1,6 +1,6 @@
 export const LOCALES = {
-  ENGLISH: "en",
-  RUSSIAN: "ru-RU",
-  CHINES: "chs",
-  SPANISH: "es",
+  ENGLISH: 'en',
+  RUSSIAN: 'ru-RU',
+  CHINES: 'chs',
+  SPANISH: 'es',
 };
