@@ -1,5 +1,4 @@
 .connectButton {
-  border: 1px solid rgb(173, 173, 173);
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -9,10 +8,43 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+.connectButton__disabled{
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  padding-bottom: 15px;
+  margin: 10px 0px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+.connect__text {
+  align-items: center;
+  line-height: 0;
+}
+.connect__text h1 {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 18px;
+}
+.connect__text p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.check,.lock,.walletpic {
+  padding: 5px;
+  margin: 0px 15px;
+  margin-top: 5px;
+  border-radius: 10px;
+}
 @media (prefers-color-scheme: dark) {
   .connectButton {
     border: 1px solid rgb(59, 59, 59);
 
+  }
+  .connectButton__disabled{
+    border: 1px solid rgb(85, 85, 85);
   }
   .connectButton:hover {
     background-color: #333336;
@@ -20,11 +52,18 @@
   .check,.walletpic,.lock{
     background-color: #272728;
   }
+  .connect__text p {
+    color: #ebebf599;
+  }
 }
 
 @media (prefers-color-scheme: light) {
   .connectButton {
-    border: 1px solid rgb(204, 204, 204);
+    border: 1px solid rgb(221, 221, 221);
+
+  }
+  .connectButton__disabled {
+    border: 1px solid rgb(194, 194, 194);
 
   }
   .connectButton:hover {
@@ -39,41 +78,7 @@
   .lock{
     background-color: #DCDCDD;
   }
-}
-
-.connect__text {
-  align-items: center;
-  line-height: 0;
-}
-.connect__text h1 {
-  font-family: 'Roboto',sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: normal;
-}
-.connect__text p {
-  font-family: 'Roboto',sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  opacity: 0.7;
-}
-.check {
-
-  width: 40px;
-  margin: 0px 15px;
-  margin-top: 5px;
-  border-radius: 10px;
-}
-.lock {
-
-  width: 40px;
-  margin: 0px 15px;
-  margin-top: 5px;
-  border-radius: 10px;
-}
-.walletpic {
-  width: 40px;
-  margin: 0px 15px;
-  margin-top: 5px;
-  border-radius: 10px;
+  .connect__text p {
+    color: #3c3c4399;
+  }
 }

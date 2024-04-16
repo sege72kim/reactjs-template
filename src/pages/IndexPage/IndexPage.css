@@ -24,27 +24,40 @@
 
 .description {
   margin-top: -5px;
-  font-size: 15px;
-  line-height: 1.4;
-  font-family: 'Roboto',sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22px;
+
 }
 .taskstitle {
-  font-family: 'Roboto',sans-serif;
+
   margin-top: 30px;
-  font-weight: 700;
+  font-weight: 590;
   font-size: 20px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+  line-height: 24px;
 }
 
 .taskstitle2 {
-  font-family: 'Roboto',sans-serif;
-  color: var(--tg-theme-text-color);
-  opacity: 0.7;
-  line-height: 0.8;
+
+  color: rgba(60, 60, 67, .6);
+  color: rgba(235, 235, 245, .6);
+  line-height: 20px;
   font-weight: 400;
   font-size: 15px;
 }
 .buttons {
-  margin-top: 20px;
+  margin-top: 15px;
   padding-bottom: 40px;
+}
+@media (prefers-color-scheme: dark) {
+  .taskstitle2 {
+    color: rgba(235, 235, 245, .6);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .taskstitle2 {
+    color: rgba(60, 60, 67, .6);
+  }
 }

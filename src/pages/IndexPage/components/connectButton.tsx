@@ -5,9 +5,9 @@ import {
 } from "@tonconnect/ui-react"
 import { useEffect } from "react"
 import { FormattedMessage } from "react-intl"
-
-import done from "~/pages/IndexPage/components/images/done.png"
-import walletpic from "~/pages/IndexPage/components/images/wallet.png"
+import tempicon from "~/pages/IndexPage/components/images/tempicon.svg"
+import done from "~/pages/IndexPage/components/images/done.svg"
+import lock from "~/pages/IndexPage/components/images/lock.svg"
 import type { Task } from "~/pages/IndexPage/IndexPage.tsx"
 
 import "./styles.css"
@@ -30,11 +30,13 @@ const Connect = ({ task, completeTask }: TaskProps) => {
 
   return (
     <div className="connectButton" onClick={open}>
-      {wallet ? (
-        <img src={done} className="check"  alt=''/>
-      ) : (
-        <img src={walletpic} className="walletpic"  alt=''/>
-      )}
+      <img
+        src={task.isCompleted ? done : task.isOpened ? tempicon : lock}
+        alt=""
+        className={
+          task.isCompleted ? "check" : task.isOpened ? "walletpic" : "lock"
+        }
+      />
       <div className="connect__text">
         <h1>
           <FormattedMessage id="connect" />

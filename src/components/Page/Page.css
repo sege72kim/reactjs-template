@@ -5,8 +5,8 @@
 
 .page__title {
   font-size: 24px;
-  font-family: 'Roboto',sans-serif;
-  font-weight: 700;
+  font-weight: 590;
+  line-height: 28px;
 }
 
 .page__disclaimer {

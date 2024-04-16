@@ -1,7 +1,8 @@
 body {
+  font-family: -apple-system, "SF Pro Text", "SF UI Text", system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  --color-text-secondary: var(--palette-transparent-dark-60);
   background: var(--background-color);
   color: var(--tg-theme-text-color, black);
 }
@@ -17,7 +18,6 @@ body {
     --background-color: white;
   }
 }
-
 blockquote {
   margin: 0;
 }
