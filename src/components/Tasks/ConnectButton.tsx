@@ -5,7 +5,7 @@ import {
 } from "@tonconnect/ui-react"
 import { useEffect } from "react"
 import { FormattedMessage } from "react-intl"
-import tempicon from "../../../public/images/tempicon.svg"
+import walletpic from "../../../public/images/wallet.svg"
 import done from "../../../public/images/done.svg"
 import lock from "../../../public/images/lock.svg"
 import type { Task } from "~/pages/IndexPage/IndexPage.tsx"
@@ -31,7 +31,7 @@ const Connect = ({ task, completeTask }: TaskProps) => {
   return (
     <div className="connectButton" onClick={open}>
       <img
-        src={task.isCompleted ? done : task.isOpened ? tempicon : lock}
+        src={task.isCompleted ? done : task.isOpened ? walletpic : lock}
         alt=""
         className={
           task.isCompleted ? "check" : task.isOpened ? "wallet-pic" : "lock"

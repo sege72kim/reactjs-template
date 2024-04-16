@@ -3,7 +3,6 @@ import tempicon from "../../../public/images/tempicon.svg"
 import done from "../../../public/images/done.svg"
 import lock from "../../../public/images/lock.svg"
 import type { Task } from "~/pages/IndexPage/IndexPage.tsx"
-
 import "./styles.css"
 
 interface TaskProps {
