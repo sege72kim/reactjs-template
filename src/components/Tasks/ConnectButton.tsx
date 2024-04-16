@@ -30,9 +30,7 @@ const Connect = ({ task, completeTask }: TaskProps) => {
       <img
         src={wallet ? "./images/done.svg" : "./images/wallet.svg"}
         alt=""
-        className={
-          task.isCompleted ? "check" : task.isOpened ? "wallet-pic" : "lock"
-        }
+        className={wallet ? "check" : "wallet-pic"}
       />
       <div className="connect__text">
         <h1>

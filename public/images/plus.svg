@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 100 100">
+    <!-- Горизонтальная линия -->
+    <line x1="30" y1="50" x2="70" y2="50" stroke="#007AFF" stroke-width="10"/>
+    <!-- Вертикальная линия -->
+    <line x1="50" y1="30" x2="50" y2="70" stroke="#007AFF" stroke-width="10"/>
+</svg>

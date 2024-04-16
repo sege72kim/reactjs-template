@@ -18,7 +18,7 @@ const JoinButton = ({ task }: TaskProps) => {
           task.isCompleted
             ? "./images/done.svg"
             : task.isOpened
-              ? "./images/tempicon.svg"
+              ? "./images/plus.svg"
               : "./images/lock.svg"
         }
         alt=""
