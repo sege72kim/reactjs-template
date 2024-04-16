@@ -1,8 +1,5 @@
 import { postEvent, Utils } from "@tma.js/sdk"
 import { FormattedMessage } from "react-intl"
-import tempicon from "../../../public/images/tempicon.svg"
-import done from "../../../public/images/done.svg"
-import lock from "../../../public/images/lock.svg"
 import type { Task } from "~/pages/IndexPage/IndexPage.tsx"
 
 import "./styles.css"
@@ -29,7 +26,13 @@ const LinkButton = ({ task, completeTask }: TaskProps) => {
       onClick={handleClick}
     >
       <img
-        src={task.isCompleted ? done : task.isOpened ? tempicon : lock}
+        src={
+          task.isCompleted
+            ? "./images/done.svg"
+            : task.isOpened
+              ? "./images/tempicon.svg"
+              : "./images/lock.svg"
+        }
         alt=""
         className={
           task.isCompleted ? "check" : task.isOpened ? "wallet-pic" : "lock"
@@ -40,9 +43,9 @@ const LinkButton = ({ task, completeTask }: TaskProps) => {
         <h1>
           <FormattedMessage id="getnft" />
         </h1>
-        <p>
+        <div className="connect__text__p">
           <FormattedMessage id="getgems" />
-        </p>
+        </div>
       </div>
     </div>
   )

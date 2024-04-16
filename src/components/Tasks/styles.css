@@ -25,9 +25,14 @@
   font-weight: 500;
   line-height: 18px;
 }
-.connect__text p {
+.connect__text__p {
   font-size: 14px;
   font-weight: 400;
+  display: block;
+    margin-top: 1em; 
+    margin-bottom: 1em;
+    margin-left: 0; 
+    margin-right: 0; 
 }
 
 .check,.lock,.wallet-pic {
@@ -42,13 +47,13 @@
   .connectButton__disabled{
     border: 1px solid rgb(85, 85, 85);
   }
-  .connectButton:hover {
+  .connectButton:active {
     background-color: #333336;
   }
   .check,.wallet-pic,.lock{
     background-color: #272728;
   }
-  .connect__text p {
+  .connect__text__p {
     color: #ebebf599;
   }
 }
@@ -62,7 +67,7 @@
     border: 1px solid rgb(194, 194, 194);
 
   }
-  .connectButton:hover {
+  .connectButton:active {
     background-color: rgb(214, 214, 214);
   }
   .check{
@@ -74,7 +79,7 @@
   .lock{
     background-color: #DCDCDD;
   }
-  .connect__text p {
+  .connect__text__p {
     color: #3c3c4399;
   }
 }

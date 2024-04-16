@@ -1,7 +1,4 @@
 import { FormattedMessage } from "react-intl"
-import tempicon from "../../../public/images/tempicon.svg"
-import done from "../../../public/images/done.svg"
-import lock from "../../../public/images/lock.svg"
 import type { Task } from "~/pages/IndexPage/IndexPage.tsx"
 import "./styles.css"
 
@@ -16,7 +13,13 @@ const AccessButton = ({ task }: TaskProps) => {
       className={task.isOpened ? "connectButton" : "connectButton__disabled"}
     >
       <img
-        src={task.isCompleted ? done : task.isOpened ? tempicon : lock}
+        src={
+          task.isCompleted
+            ? "./images/done.svg"
+            : task.isOpened
+              ? "./images/tempicon.svg"
+              : "./images/lock.svg"
+        }
         alt=""
         className={
           task.isCompleted ? "check" : task.isOpened ? "wallet-pic" : "lock"
@@ -26,9 +29,9 @@ const AccessButton = ({ task }: TaskProps) => {
         <h1>
           <FormattedMessage id="anon" />
         </h1>
-        <p>
+        <div className="connect__text__p">
           <FormattedMessage id="inform" />
-        </p>
+        </div>
       </div>
     </div>
   )
