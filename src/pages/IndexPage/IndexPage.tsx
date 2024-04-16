@@ -9,6 +9,7 @@ import JoinButton from "~/components/Tasks/JoinButton.tsx"
 import LinkButton from "~/components/Tasks/LinkButton.tsx"
 
 import "./IndexPage.css"
+import Notification from "~/components/Tasks/Notification"
 
 export interface Task {
   id: number
@@ -77,6 +78,11 @@ export const IndexPage: FC = () => {
 
   if (!data?.tasks?.length) return <></>
 
+  const showNotification = () => {
+    // Здесь вы можете добавить логику, связанную с отображением уведомления
+    console.log("Уведомление показано")
+  }
+
   return (
     <Page title="Not meme. Group access">
       <div className="description">
@@ -97,6 +103,7 @@ export const IndexPage: FC = () => {
         />
         <JoinButton task={data.tasks[3]} completeTask={() => completeTask(3)} />
       </div>
+      <Notification />
     </Page>
   )
 }

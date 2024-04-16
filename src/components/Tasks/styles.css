@@ -40,6 +40,27 @@
   margin: 5px 15px 0;
   border-radius: 10px;
 }
+
+.notification {
+  position: fixed;
+  bottom: -100px; 
+  left: 50%;
+  width: 80%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 20px 20px;
+  border-radius: 15px;
+  transition: bottom 0.5s ease; 
+  font-weight: 600;
+  font-size:14px;
+}
+
+.notification.show {
+  bottom: 10px; 
+}
+
+
 @media (prefers-color-scheme: dark) {
   .connectButton {
     border: 1px solid rgb(59, 59, 59);
@@ -56,9 +77,15 @@
   .connect__text__p {
     color: #ebebf599;
   }
+  .notification {
+    background-color: #2A2A2A;
+  }
 }
 
 @media (prefers-color-scheme: light) {
+  .notification {
+    background-color: #575757;
+  }
   .connectButton {
     border: 1px solid rgb(221, 221, 221);
 
