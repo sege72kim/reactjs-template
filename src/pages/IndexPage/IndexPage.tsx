@@ -31,7 +31,8 @@ export const IndexPage: FC = () => {
     const modifiedData = data
 
     modifiedData.tasks[id].isCompleted = !modifiedData.tasks[id].isCompleted
-    if (modifiedData.tasks[id + 1]) {
+
+    if (modifiedData.tasks[id].isCompleted) {
       modifiedData.tasks[id + 1].isOpened = true
     }
 

@@ -4,18 +4,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
   --color-text-secondary: var(--palette-transparent-dark-60);
   background: var(--background-color);
-  color: var(--tg-theme-text-color, black);
+  
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #1C1C1E;
+    color: white;
   }
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --background-color: white;
+    color:black
   }
 }
 blockquote {
